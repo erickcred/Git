@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    background-color: #2f3640;
+    color: #f5f6fa;
+    padding: 16px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
+}
+header li a {
+    color: #f5f6fa;
+    text-decoration: none;
+}
+
+.container {
+    /* width: 1366px; */
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.articles article img {
+    width: 100%;
+}
+.articles article {
+    width: 30%;
+}
+.articles article:hover {
+    transform: scale(1.05);
+}
+
+section {
+    padding: 20px 0;
+}
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+.articles article h3 {
+    margin: 8px 0;
+    font-size: 24px;
+}
+.articles article a {
+    background-color: blue;
+    border: solid 1px transparent;
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 4px 20px;
+    margin-top: 8px;
+}
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.articles article a:hover {
+    text-decoration: underline;
+}
+
+
+section h2 {
+    font-size: 32px;
+}
+#sport {
+    background-color: rgba(0, 255, 0, .1)
+}
+#sport .articles article a {    
+    background-color: rgba(0, 255, 0, .8);
+    color: #000;
+}
+
+#economy {
+    background-color: #f8f59f;
+}
+#economy .articles article a {
+    background-color: #ff9f1a;
+}
+    /* height: 180px; quando limitamos a altura a largura vai se adequar para manter a proporção */
+#entertainment {
+    background-color: #f8b59f9c;
+}
+#entertainment .articles article a {
+    background-color: rgba(154, 139, 3, 0.8);
+    color: rgb(36, 36, 36);
+}
+
+#technology {
+    background-color: #a19ff89c;
+}
+#technology .articles article a {
+    background-color: rgba(0, 110, 255, 0.798);
+    color: #000;
+}
+
+
+@media (max-width: 768px)
+{
+    .articles article {
+        width: 100%;
+    }
+}
