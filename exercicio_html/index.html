@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>Registro</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body class="container">
+    <form action="registrar" method="post">
+        <label for=""></label>
+        <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome">
+        
+        <label for=""></label>
+        <input type="text" name="email" id="email" class="form-control" placeholder="Seu email">
+        
+        <label for=""></label>
+        <input type="password" name="nome" id="nome" class="form-control" placeholder="Senha">
+        
+        <label for=""></label>
+        <input type="password" name="nome" id="nome" class="form-control" placeholder="Confirme a senha">
+
+        <input type="checkbox" name="mostrar-senha" id="mostrar-senha">
+        <label for="mostrar-senha">Mostrar senha</label> <br />
+        
+        <button type="submit" class="btn btn-outline-success mt-3">Cadastrar</button>
+    </form>
+
+
+    <script>
+        let mostrarSenha = document.querySelector("input[name='mostrar-senha']");
+        let senhas = document.querySelectorAll("input[type='password']");
+
+        mostrarSenha.addEventListener("click", () => {
+            if (mostrarSenha.checked) {
+                senhas.forEach(senha => {
+                    senha.type = "text";
+                });
+            } else {
+                senhas.forEach(senha => {
+                    senha.type = "password";
+                });
+            }
+        });
+    </script>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
