@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals</title>
+
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalTeste">Abrir modal</button>
+
+    <div id="modalTeste" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Título da Modal</h5>
+                    <button type="button" class="btn btn-modal modal-close" data-bs-dismiss="modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quos nostrum perspiciatis, commodi repudiandae vel beatae accusamus corporis saepe fugit in corrupti labore dolores at, aliquam dicta harum libero nisi.</p>
+                </div>
+                <div class="modal-footer">
+                    <h5>Rodapé da Modal</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFundoFixo">Modal 2</button>
+
+    <div id="modalFundoFixo" class="modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Título Moda 2</h5>
+                    <button type="button" class="btn btn-modal modal-close" data-bs-dismiss="modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, deserunt, provident ut enim quod repellat labore necessitatibus doloremque qui eius pariatur eum consequuntur quas non veniam dolores illo! Esse, earum!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (e) => {
+            const modalExemplo = new bootstrap.Modal('#modalFundoFixo');
+            setTimeout(() => {
+                e.target.querySelector("#modalFundoFixo .modal-header h5").textContent = "Modal aberto pelo JavaScript";
+                modalExemplo.show();
+            }, 100);
+        });
+    </script>
+</body>
+</html>

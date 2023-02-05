@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toasts</title>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+    <style>
+        header {
+            background-color: rgb(130, 130, 130);
+            position: sticky;
+            top: 0;
+            left: 0
+        }
+        .navbar-nav .nav-link.active {
+            color: #fff;
+        }
+        .nav-link {
+            text-align: center;
+        }
+
+        section {
+            background-color: pink;
+            height: 100vh;
+            padding: 65px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="cabecalho">
+        
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Título da página</h1>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <nav id="menu" class="collapse navbar-collapse justify-content-end">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#inicio" class="nav-link active">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#produtos" class="nav-link">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#promocoes" class="nav-link">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contato" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="caixaEntrada" type="button" class="btn btn-sm btn-outline-warning text-white">checar caixa de entrada</button>
+            </div>
+        </div>
+
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <div  class="container">
+                <h2>Inicio</h2>
+            </div>
+        </section>
+        <section id="produtos">
+            <div  class="container">
+                <h2>Produtos</h2>
+            </div>
+        </section>
+        <section id="promocoes">
+            <div  class="container">
+                <h2>Promoções</h2>
+            </div>
+        </section>
+        <section id="contato">
+            <div  class="container">
+                <h2>Contato</h2>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="toast-container position-fixed bottom-0 end-0 pb-3 pe-4">
+
+        <div id="toastMensagem" class="toast">
+            <header class="toast-header">
+                <strong>Inportant</strong>
+            </header>
+
+            <div class="toast-body">
+                <p>10 mensagens na caixa de entrada</p>
+                <div>
+                    <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="toast">Descartar</button>
+                    <a href="#" class="btn btn-sm btn-success">Ir para o Cadastro</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./lib/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const ativadorToast = document.getElementById("caixaEntrada");
+        const mensagem = document.getElementById("toastMensagem");
+
+        if (ativadorToast) {
+            ativadorToast.addEventListener("click", function () {
+                const toast = new bootstrap.Toast(mensagem);
+
+                toast.show();
+            })
+        }
+    </script>
+
+</body>
+</html>

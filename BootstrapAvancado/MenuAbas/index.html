@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Aba</title>
+
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+
+    <style>
+        header {
+            background-color: rgb(154, 62, 62);
+            position: sticky;
+            top: 0;
+            left: 0
+        }
+        .navbar-nav .nav-link.active {
+            color: #fff;
+        }
+        .nav-link {
+            text-align: center;
+        }
+
+        section {
+            background-color: pink;
+            height: 100vh;
+            padding: 65px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="cabecalho">
+        
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Título da página</h1>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <nav id="menu" class="collapse navbar-collapse justify-content-end">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#inicio" class="nav-link active">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#produtos" class="nav-link">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#promocoes" class="nav-link">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contato" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <div  class="container">
+                <h2>Inicio</h2>
+            </div>
+        </section>
+        <section id="produtos">
+            <div  class="container">
+                <h2>Produtos</h2>
+
+                <div>
+                    <nav class="nav nav-tabs">
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#eletronicos" class="nav-link active">Eletronicos</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#modaM" class="nav-link">Moda Maculina</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#modaF" class="nav-link">Moda Feminina</button>
+                    </nav>
+
+                    <div class="tab-content">
+                        <div id="eletronicos" class="tab-pane active">
+                            Conteúdo da aba de eletrónicos
+                        </div>
+
+                        <div id="modaM" class="tab-pane">
+                            Conteúdo da aba de Moda Masculina
+                        </div>
+
+                        <div id="modaF" class="tab-pane">
+                            Conteúdo da aba de Moda Feminina
+                        </div>
+                    </div>
+
+                    <nav class="nav nav-pills">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#conzinha">Cozinha</button>
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#churraco">Churraco</button>
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#chimarrao">Chimarrao</button>
+                    </nav>
+
+                    <div class="tab-content">
+                        <div id="conzinha" class="tab-pane active">
+                            Conteúdo de Cozinha
+                        </div>
+                        <div id="churraco" class="tab-pane">
+                            Conteúdo de Churraco
+                        </div>
+                        <div id="chimarrao" class="tab-pane">
+                            Conteúdo de Chimarrao
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="promocoes">
+            <div  class="container">
+                <h2>Promoções</h2>
+            </div>
+        </section>
+        <section id="contato">
+            <div  class="container">
+                <h2>Contato</h2>
+            </div>
+        </section>
+    </div>
+
+    <script src="./lib/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
