@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,900&display=swap');
+:root {
+    --orange-light: #E15F41;
+    --orange-light-hover: #dececa;
+
+
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar,
+footer {
+    background-color: var(--orange-light);
+}
+
+.section-title,
+footer .copy {
+    font-family: "Pacifico", cursive;
+}
+.navbar-brand {
+    cursor: pointer;
+}
+.navbar-brand,
+.navbar-brand:hover,
+header .nav .nav-link,
+.nav-cardapio .nav-link.active:hover {
+    color: #fff;
+}
+header .nav .nav-link.active,
+header .nav .nav-link.active:hover {
+    background-color: #fff;
+    border-radius: 10px 100px;
+    color: var(--orange-light);
+}
+.nav .nav-link:hover {
+    color: var(--orange-light-hover);
+}
+.navbar-toggler {
+    background-color: #fff;
+}
+
+#sobre,
+#cardapio {
+    background-color: #ffeae6;
+}
+
+section {
+    padding: 85px 0;
+}
+
+.text-colored {
+    color: var(--orange-light)
+}
+
+.nav-cardapio .nav-link.active,
+#contato  button {
+    background-color: var(--orange-light);
+    color: #fff;
+}
+.nav-cardapio .nav-link:hover {
+    color: var(--orange-light)
+}
+
+
+.social-links li {
+    display: inline;
+    list-style: none;
+}
+.social-links li a {
+    text-decoration: none;
+}
+
+footer {
+    padding: 50px 0;
+}
+
+
+
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 280px;
+        object-fit: cover;
+        object-position: left;
+    }
+    
+}
