@@ -1,0 +1,98 @@
+@use "config/reset";
+@use "config/variaveis";
+@use "sass:math";
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    max-width: 1024px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: variaveis.$corPrincipal;
+    padding: 16px 0;
+
+    & h1 {
+        text-align: center;
+        color: #fff;
+    }
+}
+
+@mixin elementosForm($margin: 16px) {
+    background-color: transparent;
+    padding: 8px;
+    display: block;
+    width: 100%;
+    margin-bottom: $margin;
+}
+
+@function pixelParaEm($alvoPixel, $contextoEmPixel: 16px) {
+    @return math.div($alvoPixel, $contextoEmPixel)+em;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+    max-width: 760px;
+
+    h2 {
+        font-size: pixelParaEm(42px);
+        margin-bottom: 2.5em;
+        text-align: center;
+    }
+
+    form {
+        width: 100%;
+        max-width: 480px;
+
+        label {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input {
+            @include elementosForm();  
+            border: 3px solid transparent;
+            border-bottom: 2px solid variaveis.$corPrincipal;
+            
+            &:focus-visible {
+                outline-color: #01a1a44a;
+            }
+        }
+
+        button {
+            @include elementosForm();
+            background-color: variaveis.$corSecundaria;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 4px;
+
+            &:hover {
+                background-color: darken(variaveis.$corSecundaria, 10%);
+                background-color: lighten(variaveis.$corPrincipal, 15%);
+            }
+        }
+
+    }
+}
+
+@media (max-width: variaveis.$table) {
+    h2 {
+        font-size: pixelParaEm(32px)!important;
+    }
+}
+@media (max-width: variaveis.$mobile) {
+    h2 {
+        font-size: pixelParaEm(22px)!important;
+    }
+}

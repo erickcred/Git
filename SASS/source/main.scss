@@ -1,0 +1,13 @@
+@use "config/reset";
+@use "config/cores";
+@use "secoes/produtos";
+
+.container {
+    max-width: 1024px;
+    width: 95%;
+    margin: 0 auto;
+}
+body {
+    background-color: cores.$corDeFundo;
+}
+

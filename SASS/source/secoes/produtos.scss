@@ -1,0 +1,25 @@
+@use "../config/cores";
+
+.produtos .container {
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 1rem;
+
+    & .produto h3 {
+        color: cores.$corPrincipal;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .ptodutos .container {
+
+    }
+}
+
+@media (max-width: 568px) {
+    .produtos .container {
+        flex-direction: column;
+    }
+}
