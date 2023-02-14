@@ -1,0 +1,93 @@
+
+
+@import "./maps.less";
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1024px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+li {
+    font-size: 18px;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 29px;
+    color: white;
+}
+
+header {
+    background-color: #cor[principal];
+    color: white;
+    padding: 16px 0;
+    position: sticky;
+    top: 0; 
+    left: 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .navbar {
+            ul {
+                display: flex;
+                gap: 16px;
+
+                li {
+                    font-size: 19px;
+                    font-weight: bold;
+                    
+                    a {
+                        color: white;
+                        transition: all ease .5s;
+                        padding: 4px;
+                        
+                        &:hover {
+                            color: #cor[link];
+                        }
+
+                        &.active {
+                            color: #cor[linkactive];
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+}
+
+
+section {
+    height: 50vh;
+    padding: 80px 0;
+
+    h2 {
+        font-weight: bold;
+        color: #cor[principal];
+    }
+}
+
+footer {
+    background-color: #cor[principal];
+    color: white;
+    padding: 20px 0;
+
+    .copy {
+        font-size: 12px;
+        color: rgb(209, 209, 209);
+        margin-top: 40px;
+    }
+}
