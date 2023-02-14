@@ -1,0 +1,28 @@
+.form {
+    margin: 40px;
+    
+    &__control {
+        margin-bottom: 16px;
+        font-family: sans-serif;
+    }
+
+    &__text-input {
+        padding: 3px;
+        border: none;
+        border-bottom: 2px solid #000;
+
+        &:focus {
+            outline-color: rgb(6, 153, 153);
+            box-shadow: 1px 1px 10px -2px rgb(6, 153, 153);
+            border-color: transparent;
+        }
+    }
+
+    &__submit {
+        cursor: pointer;
+
+        &--sending {
+            cursor: wait;
+        }
+    }
+}

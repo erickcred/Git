@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smacss</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/module.css">
+    <link rel="stylesheet" href="styles/tema-a.css">
+    <link rel="stylesheet" href="styles/tema-b.css">
+</head>
+<body class="tema-b">
+
+    <div id="header">
+        <div class="container">
+            <h1 class="title">Nome do site</h1>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="acordion">
+            <header class="acordion-header">
+                Nome do acordeon
+            </header>
+            <p class="acordion-content">
+                Conteúdo
+            </p>
+        </div>
+        <div class="acordion">
+            <header class="acordion-header">
+                Nome do acordeon2
+            </header>
+            <p class="acordion-content">
+                Conteúdo
+            </p>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <div class="container">
+            <div class="mensagem">
+                <h5 class="mensagem-titulo">Atenção</h5>
+                <p class="mensagem-conteudo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga eum temporibus a similique velit nihil, ullam optio culpa eos amet eveniet perspiciatis, accusantium vel sunt, magni illum nobis error! Et.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mensagem mensagem-is-error">
+                <h5 class="mensagem-titulo">Atenção</h5>
+                <p class="mensagem-conteudo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga eum temporibus a similique velit nihil, ullam optio culpa eos amet eveniet perspiciatis, accusantium vel sunt, magni illum nobis error! Et.</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script>
+        // const acordions = document.querySelectorAll(".acordion-header");
+        // acordions.forEach(function(acordion) {
+        //     acordion.addEventListener("click", function(evento) {
+        //         evento.target.parentNode.classList.toggle("is-open")
+        //     });
+        // });
+                
+        const acordions2 = document.querySelectorAll(".acordion");
+        acordions2.forEach(function(acordion) {
+            
+            acordion.addEventListener("click", function() {
+                acordion.classList.toggle("is-open")
+            });
+        });
+    </script>
+    
+</body>
+</html>
